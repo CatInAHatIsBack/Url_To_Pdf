@@ -3,7 +3,7 @@ use std::{env, fs};
 use headless_chrome::Browser;
 use std::io;
 
-fn browse_wikipedia(url: &str,name: &str) -> Result<(), Box<dyn Error>> {
+fn pdf_to_url(url: &str,name: &str) -> Result<(), Box<dyn Error>> {
     let browser = Browser::default()?;
 
     let tab = browser.new_tab()?;
@@ -20,6 +20,7 @@ fn browse_wikipedia(url: &str,name: &str) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 fn main() {
+    
     let mut url = String::new();
     println!("enter url");
     io::stdin().read_line(&mut url).expect("Failed to read line");
@@ -30,7 +31,9 @@ fn main() {
     io::stdin().read_line(&mut name).expect("Failed to read line");
     name = name.trim().to_string();
 
-    // let mut name= "https://en.wikipedia.org/wiki/WebKit";
+    // test site
+    // https://en.wikipedia.org/wiki/WebKit 
+
     
-    browse_wikipedia(&url,&name);
+    pdf_to_url(&url,&name);
 }
