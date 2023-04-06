@@ -99,7 +99,7 @@ fn main() {
     // size_str = "A5".to_string();
     println!("enter print_size. Options: A4, A5, A6, A7");
     io::stdin().read_line(&mut size_str).expect("Failed to read line");
-    name = name.trim().to_string().to_uppercase();
+    size_str = size_str.trim().to_string().to_uppercase();
 
 
     // test site
