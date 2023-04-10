@@ -114,7 +114,7 @@ fn main() {
 
     let mut size_str = String::new();
     // size_str = "A5".to_string();
-    println!("enter print_size. Options: A4, A5, A6, A7, Letter, Legal, Tabloid, Ledger,");
+    println!("enter print_size. Options: A4, A5, A6, A7, Letter, Legal, Tabloid, Ledger");
     io::stdin().read_line(&mut size_str).expect("Failed to read line");
     size_str = size_str.trim().to_string().to_uppercase();
 
